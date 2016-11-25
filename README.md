@@ -4,7 +4,7 @@ CAN communication with BIOMOT exoskeleton actuators using ROS.
 
 ### How do I get set up?
 
-The root folder contains both the nodes to be run on the BeagleBoard Black [BBB](in scr_bbb) and on a remote PC (in src). To compile, put the folder in a catkin-workspace and run catkin_make (see ROS documentation for setup and initialization of the catkin workspace: http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+The root folder contains both the nodes to be run on the BeagleBoard Black (BBB, in scr_bbb folder) and on a remote PC (in src folder). To compile, put the folder in a catkin-workspace and run catkin_make (see ROS documentation for setup and initialization of the catkin workspace: http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 
 To build the nodes provided with a user interface (ending with "Ui"), Qt libraries need to be set-up on your system.
 
