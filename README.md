@@ -18,7 +18,7 @@ To start the whole GUI run the script launch_ROS_nodes_in_client.sh on the PC co
 
 ### Contribution guidelines
 
-Please refer to the file BioMot_Project.pdf for further information.
+Please refer to the file BIOMOT_project_description.pdf for further information.
 
 ### Who do I talk to?
 
