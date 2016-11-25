@@ -1,0 +1,6 @@
+Header header
+
+int32 left_toe_threshold
+int32 left_heel_threshold
+int32 right_toe_threshold
+int32 right_heel_threshold

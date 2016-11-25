@@ -1,0 +1,59 @@
+### STEP BY STEP INSTRUCTIONS TO INSTALL THE WIFI DRIVER ON THE BBB FOR THE USB WIFI DONGLE MODEL TP-LINK WN725N in BBB ###
+
+[Video-tutorial in YouTube](https://www.youtube.com/watch?v=lCa_D6SlVhg)
+
+# In a terminal on the BBB:
+
+apt-get update
+apt-get install lsb-release
+apt-get install git
+apt-get install make
+apt-get install gcc
+apt-get install build-essential python-dev python-pip python-smbus -y
+apt-get install chkconfig
+apt-get install wireless-tools wpasupplicant
+apt-get upgrade
+mkdir ~/beaglebone-ubuntu-scripts
+cd ~/beaglebone-ubuntu-scripts
+wget https://raw.github.com/gkaindl/beagle...
+chmod +x bb-get-rcn-kernel-source.sh
+./bb-get-rcn-kernel-source.sh
+reboot
+
+
+
+### Wait for the BBB to be ready and write in a terminal on the BBB
+
+cd /usr/src
+cd linux-3.8.13-bone67
+make oldconfig
+make prepare
+make modules_prepare
+mkdir ~/RTL8188EU
+cd ~/RTL8188EU
+git clone git://github.com/lwfinger/rtl8188eu.git
+cd rtl8188eu
+make
+make install
+reboot
+nano /etc/network/interfaces
+
+
+
+### Uncomment wifi section in the file /etc/network/interfaces. The file content must be similar to the next example:
+
+# WiFi Example
+auto wlan0
+iface wlan0 inet static
+    wpa-ssid "TP-LINK70C520"
+    wpa-psk  "66828761"
+    address  192.168.0.103
+    netmask  255.255.255.0
+    network  192.168.0.0
+    gateway  192.168.0.1
+
+
+
+### Reboot the BBB. Write in a terminal on the BBB
+
+reboot

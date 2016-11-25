@@ -1,0 +1,21 @@
+<!-- Nodes to be launched in BeagleBone Black -->
+<launch>
+ <!-- Node that receives data from the joint boards through the CAN bus.
+      This node also broadcasts data through the ROS system using custom
+      ROS messages
+  -->
+ <node pkg="h2r" name="rx_node"   type="rx_node" args="-rf 1"/>
+ <!--<remap from="/joint_state" to="/joint_state_exo_topic" />-->
+ <!--</node>-->
+ <!-- This node collects data from several sources. Then this node writes all this data
+      into the CAN bus in order to be consumed by the joint boards.
+ -->
+ <node pkg="h2r" name="tx_node"   type="tx_node"/>
+<!-- This node is used to read the foot switch resistor in the exoskeleton
+ -->
+ <node pkg="h2r" name="fsrs_node"    type="fsrs_node"/>
+</launch>
+
+<!--
+<node pkg="h2r" name="pattern_node" type="pattern_node"/>
+-->

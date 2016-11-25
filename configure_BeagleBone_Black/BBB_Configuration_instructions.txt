@@ -1,0 +1,15 @@
+The following documents have to be located in the home folder:
+FSR_ON.sh
+LCAN.sh
+LGPIO.sh
+
+On a terminal type:
+sudo cp $HOME/FSR_ON.sh /etc/init.d/FSR_ON.sh
+ln -s /etc/init.d/FSR_ON.sh /etc/rc2.d/S99FSR_ON.sh
+
+sudo cp $HOME/LCAN.sh /etc/init.d/LCAN.sh
+ln -s /etc/init.d/LCAN.sh /etc/rc2.d/LCAN.sh
+
+sudo cp $HOME/LGPIO.sh /etc/init.d/LGPIO.sh
+ln -s /etc/init.d/LGPIO.sh /etc/rc2.d/LGPIO.sh
+

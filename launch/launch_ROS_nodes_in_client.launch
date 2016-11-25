@@ -1,0 +1,19 @@
+<!-- This nodes run in a PC. All this nodes display information and graphs about
+     the exoskeleton.
+ -->
+<launch>
+ <node pkg="h2r" name="commands_gui_node"                    type="commands_gui_node"/>
+ <node pkg="h2r" name="aux_var_gui_node"                     type="aux_var_gui_node"/>
+ <node pkg="h2r" name="parallel_spring_information_gui_node" type="parallel_spring_information_gui_node"/>
+</launch>
+
+<!--
+<node pkg="h2r" name="joint_angles_gui_node"      type="joint_angles_gui_node"/>
+<node pkg="h2r" name="joint_information_gui_node" type="joint_information_gui_node"/>
+<node pkg="h2r" name="pid_gui_node"               type="pid_gui_node"/>
+<node pkg="h2r" name="pid_information_gui_node"   type="pid_information_gui_node"/>
+
+<node pkg="h2r" name="patterns_gui_node"            type="patterns_gui_node"/>
+<node pkg="h2r" name="torque_gui_node"              type="torque_gui_node"/>
+<node pkg="h2r" name="sensors_information_gui_node" type="sensors_information_gui_node"/>
+-->

@@ -1,0 +1,138 @@
+├── BioMot_Project.pdf
+├── CMakeLists.txt
+├── Contributors.txt
+├── README.md
+├── configure_BeagleBone_Black
+│   ├── BB-DCAN1-00A0.dtbo
+│   ├── BBB_Change_USB0_address.txt
+│   ├── BBB_Configuration_instructions.txt
+│   ├── BBB_File_etc_network_interfaces.txt
+│   ├── BBB_Install_Wifi_driver_for_WiFi_dongle_TP-LINK_WN725N.txt
+│   ├── BBB_Internet_over_USB_only.txt
+│   ├── BBB_Pinouts.jpg
+│   ├── FSR_ON.sh
+│   ├── LCAN.sh
+│   ├── LGPIO.sh
+│   └── dtc.sh
+├── figures
+│   ├── Biomot_electronics.png
+│   ├── Biomot_exoskeleton_model.bmp
+│   ├── Biomot_exoskeleton_snapshots.png
+│   ├── Biomot_partners.png
+│   ├── Biomot_setup.png
+│   ├── Customized_CAN_cape_BeagleBone_Black_1.JPG
+│   ├── Customized_CAN_cape_BeagleBone_Black_2.JPG
+│   ├── Customized_CAN_cape_BeagleBone_Black_3.JPG
+│   ├── Customized_CAN_cape_BeagleBone_Black_4.JPG
+│   ├── Customized_CAN_cape_BeagleBone_Black_5.JPG
+│   ├── EMG_with_exoankle.jpg
+│   ├── Foot_switch_resistor.jpg
+│   ├── Foot_switch_resistor_connection.png
+│   ├── GUI_Aux_Var.png
+│   ├── GUI_Commands_FSRS.png
+│   ├── GUI_Commands_JOINTS.png
+│   ├── GUI_Control.png
+│   ├── IMG_5138.PNG
+│   ├── IMG_5139.PNG
+│   ├── IMG_5141.PNG
+│   ├── IMG_5142.PNG
+│   ├── IMG_5148.JPG
+│   └── ROS_nodes_graph.png
+├── include
+│   ├── AUX_VAR_GUI
+│   │   ├── aux_var_gui.cpp
+│   │   ├── aux_var_gui.h
+│   │   └── aux_var_gui.ui
+│   ├── COMMANDS_GUI
+│   │   ├── commands_gui.cpp
+│   │   ├── commands_gui.h
+│   │   └── commands_gui.ui
+│   ├── JOINT_ANGLES_GUI
+│   │   ├── joint_angles_gui.cpp
+│   │   ├── joint_angles_gui.h
+│   │   └── joint_angles_gui.ui
+│   ├── JOINT_INFORMATION_GUI
+│   │   ├── joint_information_gui.cpp
+│   │   ├── joint_information_gui.h
+│   │   └── joint_information_gui.ui
+│   ├── PARALLEL_SPRING_INFORMATION_GUI
+│   │   ├── parallel_spring_information_gui.cpp
+│   │   ├── parallel_spring_information_gui.h
+│   │   └── parallel_spring_information_gui.ui
+│   ├── PATTERNS_GUI
+│   │   ├── patterns_gui.cpp
+│   │   ├── patterns_gui.h
+│   │   ├── patterns_gui.ui
+│   │   ├── worker_thread_patterns_gui.cpp
+│   │   └── worker_thread_patterns_gui.h
+│   ├── PID_GUI
+│   │   ├── pid_gui.cpp
+│   │   ├── pid_gui.h
+│   │   └── pid_gui.ui
+│   ├── PID_INFORMATION_GUI
+│   │   ├── pid_information_gui.cpp
+│   │   ├── pid_information_gui.h
+│   │   └── pid_information_gui.ui
+│   ├── ReadAIN.h
+│   ├── constants.h
+│   ├── qcustomplot.cpp
+│   └── qcustomplot.h
+├── launch
+│   ├── launch_ROS_nodes_in_bbb.launch
+│   └── launch_ROS_nodes_in_client.launch
+├── lib
+│   ├── CANbus
+│   │   ├── CANbusInterface.cpp
+│   │   ├── CANbusInterface.h
+│   │   ├── CANbusReader.cpp
+│   │   ├── CANbusReader.h
+│   │   ├── CMakeLists.txt
+│   │   ├── DataFromCANbus.cpp
+│   │   ├── DataFromCANbus.h
+│   │   └── QueueData.h
+│   ├── CMakeLists.txt
+│   └── Concurrency
+│       ├── CMakeLists.txt
+│       ├── Latch.cpp
+│       ├── Latch.h
+│       ├── Queue.cpp
+│       └── Queue.h
+├── msg
+│   ├── FSRSMessage.msg
+│   ├── FeetFSRSThresholdsMessage.msg
+│   ├── ForcesMessage.msg
+│   ├── JointAnglesMessage.msg
+│   ├── PIDMessage.msg
+│   ├── ParallelSpringMessage.msg
+│   ├── PatternsMessage.msg
+│   ├── SegmentationMessage.msg
+│   ├── SensorsMessage.msg
+│   ├── SingleCommandMessage.msg
+│   └── TorquesMessage.msg
+├── package.xml
+├── scripts
+│   ├── README.txt
+│   ├── compile.sh
+│   ├── launch_ROS_nodes_in_bbb.sh
+│   ├── launch_ROS_nodes_in_client.sh
+│   ├── launch_roscore_in_client.sh
+│   ├── rbbiomot.sh
+│   └── synchronize_bbb_date_with_time_server.sh
+├── src
+│   ├── aux_var_gui_node.cpp
+│   ├── commands_gui_node.cpp
+│   ├── joint_angles_gui_node.cpp
+│   ├── joint_information_gui_node.cpp
+│   ├── parallel_spring_information_gui_node.cpp
+│   ├── patterns_gui_node.cpp
+│   ├── pid_gui_node.cpp
+│   └── pid_information_gui_node.cpp
+└── src_bbb
+    ├── CMakeLists.txt
+    ├── fsrs_node.cpp
+    ├── include
+    │   └── interruptFunctions.h
+    ├── interruptFunctions.cpp
+    ├── pattern_node.cpp
+    ├── rx_node.cpp
+    └── tx_node.cpp
